@@ -25,7 +25,11 @@ while True:
             startLastLine = runLastLine
         elif (confirm.lower() == 'n'):
             #тут будет функционал отбирания прав
-            break
+            os.system(f'passwd -l {runLastLine.split(":")[0]}')
+            print(Fore.RED + f'Пользователь {runLastLine.split(":")[0]} заблокирован.' + Style.RESET_ALL)
+            startCheckSum = runCheckSum
+            startFileSize = runFileSize
+            startLastLine = runLastLine
         else:
             os.system('cls||clear') 
             print(Style.BRIGHT + Fore.CYAN +'НЕДОПУСТИМЫЙ ВВОД' + Style.RESET_ALL)
