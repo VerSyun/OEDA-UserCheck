@@ -23,13 +23,14 @@ while True:
             startCheckSum = runCheckSum
             startFileSize = runFileSize
             startLastLine = runLastLine
-        elif (confirm.lower() == 'n'):
+        elif (confirm.lower() == 'n'): 
             #тут будет функционал отбирания прав
             os.system(f'passwd -l {runLastLine.split(":")[0]}')
             print(Fore.RED + f'Пользователь {runLastLine.split(":")[0]} заблокирован.' + Style.RESET_ALL)
             startCheckSum = runCheckSum
             startFileSize = runFileSize
             startLastLine = runLastLine
+            #почему-то выполняется два раза
         else:
             os.system('cls||clear') 
             print(Style.BRIGHT + Fore.CYAN +'НЕДОПУСТИМЫЙ ВВОД' + Style.RESET_ALL)
