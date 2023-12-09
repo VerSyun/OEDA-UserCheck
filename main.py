@@ -31,6 +31,7 @@ while True:
             startFileSize = runFileSize
             startLastLine = runLastLine
             #почему-то выполняется два раза
+            #надо будет посмотреть, как файл меняется
         else:
             os.system('cls||clear') 
             print(Style.BRIGHT + Fore.CYAN +'НЕДОПУСТИМЫЙ ВВОД' + Style.RESET_ALL)
